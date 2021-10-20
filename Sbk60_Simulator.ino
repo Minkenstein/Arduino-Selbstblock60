@@ -568,19 +568,19 @@ void signalHalt(int Sbk_Nummer) {
 
 // Funktion für Ersatzsignal.
 void signalZs(int Sbk_Nummer) {
-  if (Sbk_Nummer == 1 && sbkBlock_1_Info[Fahrt] == 0 && sbkBlock_1_Info[ErsSignal] == 0) {
+  if (Sbk_Nummer == 1 && sbkBlock_1_Info[Fahrt] == 0 && sbkBlock_1_Info[ErsSignal] == 0 && einfahrBlock_Links_Info[Belegt] == 1) {
     sbkBlock_1_Info[ErsSignal] = 1;
     ErsGT_Zaehlwerk_Var++;
   }
-  if (Sbk_Nummer == 2 && sbkBlock_2_Info[Fahrt] == 0 && sbkBlock_2_Info[ErsSignal] == 0) {
+  if (Sbk_Nummer == 2 && sbkBlock_2_Info[Fahrt] == 0 && sbkBlock_2_Info[ErsSignal] == 0 && sbkBlock_4_Info[Belegt] == 1) {
     sbkBlock_2_Info[ErsSignal] = 1;
     ErsGT_Zaehlwerk_Var++;
   }
-  if (Sbk_Nummer == 3 && sbkBlock_3_Info[Fahrt] == 0 && sbkBlock_3_Info[ErsSignal] == 0) {
+  if (Sbk_Nummer == 3 && sbkBlock_3_Info[Fahrt] == 0 && sbkBlock_3_Info[ErsSignal] == 0 && sbkBlock_1_Info[Belegt] == 1) {
     sbkBlock_3_Info[ErsSignal] = 1;
     ErsGT_Zaehlwerk_Var++;
   }
-  if (Sbk_Nummer == 4 && sbkBlock_4_Info[Fahrt] == 0 && sbkBlock_4_Info[ErsSignal] == 0) {
+  if (Sbk_Nummer == 4 && sbkBlock_4_Info[Fahrt] == 0 && sbkBlock_4_Info[ErsSignal] == 0 && einfahrBlock_Rechts_Info[Belegt] == 1) {
     sbkBlock_4_Info[ErsSignal] = 1;
     ErsGT_Zaehlwerk_Var++;
   }
